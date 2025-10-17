@@ -25,3 +25,29 @@ L'API expose pour l'instant :
 
 - `GET /health` pour vérifier l'état du service
 - `POST /translate` qui retourne une traduction simulée en attendant l'intégration du modèle IA
+
+### Tests automatisés
+
+```bash
+cd backend
+pytest
+```
+
+### Vérification manuelle rapide
+
+Une fois le serveur démarré, vous pouvez vérifier les routes principales avec `curl` :
+
+```bash
+curl http://127.0.0.1:8000/health
+
+curl -X POST http://127.0.0.1:8000/translate \
+  -H "Content-Type: application/json" \
+  -d '{
+        "text": "Bonjour tout le monde",
+        "source_language": "fr",
+        "target_language": "en",
+        "tone": "friendly",
+        "detail_level": "detailed",
+        "include_examples": true
+      }'
+```
