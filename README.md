@@ -15,6 +15,8 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+Il faut créer le venv avec la version de Python 3.11.14
+
 ### Lancement du serveur
 
 ```bash
@@ -30,7 +32,7 @@ L'API expose pour l'instant :
 
 ```bash
 cd backend
-pytest
+PYTHONPATH=. pytest
 ```
 
 ### Vérification manuelle rapide
