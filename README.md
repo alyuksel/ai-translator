@@ -8,6 +8,17 @@ Un premier squelette d'API est disponible dans `backend/`.
 
 ### Installation
 
+Vous pouvez soit utiliser l'environnement Poetry fourni, soit créer un environnement virtuel classique.
+
+#### Avec Poetry (recommandé)
+
+```bash
+poetry env use python3.11
+poetry install
+```
+
+#### Avec `venv`
+
 ```bash
 cd backend
 python3.11 -m venv .venv
@@ -15,7 +26,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Il faut créer le venv avec la version de Python 3.11.14
+Quel que soit l'outil retenu, assurez-vous d'utiliser une version de Python 3.11.x.
 
 ### Lancement du serveur
 
