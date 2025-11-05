@@ -10,11 +10,11 @@ Cette feuille de route reprend le contenu de PLAN.md et le décline en tâches c
 
 ## Résumé – Statut actuel
 - [DONE] Backend FastAPI minimal: endpoints `/health`, `/translate`, schémas Pydantic, service mock, tests unitaires écrits
-- [TODO] Exécuter la suite Pytest localement sous Python 3.11 et valider
+- [DONE] Exécuter la suite Pytest localement sous Python 3.11 et valider
 - [DONE] Version Python cible: 3.11 (confirmée) — à documenter et outiller (venv, CI)
 - [WIP] Frontend Flutter (squelette créé, appel `/translate` mock opérationnel)
 - [TODO] Intégration fournisseur IA (remplacement du mock)
-- [TODO] Qualité (lint/format/typecheck, pre-commit) et CI/CD
+- [WIP] Qualité/CI: workflow tests backend en place (pytest). Lint/typecheck (ruff/black/mypy), pre-commit et CI Flutter à faire
 - [TODO] Déploiement (Docker, hébergement), observabilité, sécurité, données
 
 ## Jalons (issues/epics)
@@ -60,8 +60,8 @@ Cette feuille de route reprend le contenu de PLAN.md et le décline en tâches c
 - [TODO] Stratégie de coût/latence et timeouts, retry, journalisation prompts
 
 ### Frontend Flutter
-- [TODO] Structure projet (ui/screens, ui/widgets, state, services)
-- [TODO] Écrans: Saisie/Config, Résultats, Historique & Préférences
+- [WIP] Structure projet (ui/screens, ui/widgets, services): squelette + écran principal + client API
+- [WIP] Écrans: Saisie/Config + Résultats implémentés partiellement; Historique & Préférences à faire
 - [TODO] Internationalisation (flutter_localizations, intl), thèmes clair/sombre, accessibilité
 - [TODO] Cache hors-ligne de résultats récents
 
@@ -80,7 +80,7 @@ Cette feuille de route reprend le contenu de PLAN.md et le décline en tâches c
 ### Déploiement & exploitation
 - [TODO] Dockerfile backend, docker-compose (API + DB)
 - [TODO] Hébergement (Railway/Render/Fly.io/AWS) avec secrets
-- [TODO] CI GitHub Actions: lint + tests (backend et Flutter), build artefacts
+- [WIP] CI GitHub Actions: tests backend opérationnels; lint/typecheck et tests Flutter + builds à ajouter
 - [TODO] Observabilité: logs structurés, métriques (Prometheus), tracing (optionnel)
 
 ### Sécurité & configuration
@@ -91,13 +91,13 @@ Cette feuille de route reprend le contenu de PLAN.md et le décline en tâches c
 ### Documentation & DX
 - [DONE] README de base (installation backend, run, tests, curls)
 - [TODO] `ARCHITECTURE.md` (vision d’ensemble, flux, choix techniques)
-- [TODO] Spécification OpenAPI enrichie (exemples, descriptions), documentation frontend
-- [TODO] Section “Versions supportées” (Python 3.11 requis) et mise à jour README/CI
+- [WIP] Documentation frontend ajoutée; Spécification OpenAPI enrichie (exemples, descriptions) à compléter
+- [DONE] Section “Versions supportées” (Python 3.11 requis) et mise à jour README/CI
 
 ## Prochaines actions immédiates (ordre suggéré)
-1) [TODO] Confirmer/propager Python 3.11 dans l’IDE et la CI, recréer le venv si nécessaire
-2) [TODO] Exécuter les tests backend sous Python 3.11 et corriger si besoin
-3) [DONE] Initialiser le projet Flutter (squelette + appel `/translate`), valider le flux bout‑à‑bout avec le mock
+1) [DONE] Confirmer/propager Python 3.11 dans l’IDE et la CI, recréer le venv si nécessaire
+2) [DONE] Exécuter les tests backend sous Python 3.11 et corriger si besoin
+3) [WIP] Initialiser le projet Flutter (squelette + appel `/translate`), valider le flux bout‑à‑bout avec le mock
 4) [TODO] Mettre en place `ruff`/`black`/`mypy` + `pre-commit` et une CI minimale (lint+tests)
 5) [TODO] Définir `TranslatorProvider` et ajouter un provider IA mockable en tests
 
@@ -106,3 +106,4 @@ Cette feuille de route reprend le contenu de PLAN.md et le décline en tâches c
 
 ## Historique
 - 2025‑10‑18: création initiale de cette roadmap à partir de PLAN.md et de l’état du repo.
+- 2025‑11‑05: alignement Python 3.11 (venv, `.python-version`, CI backend), exécution tests OK, création du squelette Flutter (appel `/translate`), mise à jour README et roadmap.
