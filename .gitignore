@@ -2,3 +2,13 @@
 __pycache__/
 .pytest_cache/
 .vscode/
+build/
+.dart_tool/
+pubspec.lock
+flutter_*.png
+*.iml
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+.packages
+.github/

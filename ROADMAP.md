@@ -12,7 +12,7 @@ Cette feuille de route reprend le contenu de PLAN.md et le décline en tâches c
 - [DONE] Backend FastAPI minimal: endpoints `/health`, `/translate`, schémas Pydantic, service mock, tests unitaires écrits
 - [TODO] Exécuter la suite Pytest localement sous Python 3.11 et valider
 - [DONE] Version Python cible: 3.11 (confirmée) — à documenter et outiller (venv, CI)
-- [TODO] Frontend Flutter (projet non initialisé)
+- [WIP] Frontend Flutter (squelette créé, appel `/translate` mock opérationnel)
 - [TODO] Intégration fournisseur IA (remplacement du mock)
 - [TODO] Qualité (lint/format/typecheck, pre-commit) et CI/CD
 - [TODO] Déploiement (Docker, hébergement), observabilité, sécurité, données
@@ -20,8 +20,8 @@ Cette feuille de route reprend le contenu de PLAN.md et le décline en tâches c
 ## Jalons (issues/epics)
 
 ### M1 — MVP technique
-- [TODO] Initialiser projet Flutter (structure dossiers, navigation, écrans Saisie/Résultats/Préférences)
-- [TODO] Consommer l’API `/translate` (mock) depuis Flutter, gestion d’état (Riverpod/BLoC)
+- [WIP] Initialiser projet Flutter (structure dossiers, navigation, écrans Saisie/Résultats/Préférences) — squelette + écran principal livrés
+- [WIP] Consommer l’API `/translate` (mock) depuis Flutter, gestion d’état (Riverpod/BLoC) — appel HTTP direct implémenté
 - [WIP] Back-end minimal en place (validation d’entrée, segments) — OK sous Python 3.11
 - [TODO] Exécuter la suite Pytest localement (Python 3.11)
 
@@ -97,7 +97,7 @@ Cette feuille de route reprend le contenu de PLAN.md et le décline en tâches c
 ## Prochaines actions immédiates (ordre suggéré)
 1) [TODO] Confirmer/propager Python 3.11 dans l’IDE et la CI, recréer le venv si nécessaire
 2) [TODO] Exécuter les tests backend sous Python 3.11 et corriger si besoin
-3) [TODO] Initialiser le projet Flutter (squelette + appel `/translate`), valider le flux bout‑à‑bout avec le mock
+3) [DONE] Initialiser le projet Flutter (squelette + appel `/translate`), valider le flux bout‑à‑bout avec le mock
 4) [TODO] Mettre en place `ruff`/`black`/`mypy` + `pre-commit` et une CI minimale (lint+tests)
 5) [TODO] Définir `TranslatorProvider` et ajouter un provider IA mockable en tests
 
