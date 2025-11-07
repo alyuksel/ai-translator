@@ -39,6 +39,10 @@ L'API expose pour l'instant :
 - `GET /health` pour vérifier l'état du service
 - `POST /translate` qui retourne une traduction simulée en attendant l'intégration du modèle IA
 
+## Frontend (Flutter)
+
+Un squelette Flutter est disponible dans `frontend/` avec un écran de traduction qui consomme l'endpoint `/translate`. Reportez-vous au fichier `frontend/README.md` pour l'installation (Flutter 3.22+) et l'exécution (`flutter run`, `flutter test`).
+
 ### Tests automatisés
 
 ```bash
