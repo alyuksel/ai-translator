@@ -144,7 +144,7 @@ class _TranslatorPageState extends State<TranslatorPage> {
                   children: [
                     Expanded(
                       child: DropdownButtonFormField<String>(
-                        value: _selectedTone,
+                        initialValue: _selectedTone,
                         decoration: const InputDecoration(
                           labelText: 'Ton',
                           border: OutlineInputBorder(),
@@ -177,7 +177,7 @@ class _TranslatorPageState extends State<TranslatorPage> {
                     const SizedBox(width: 16),
                     Expanded(
                       child: DropdownButtonFormField<String>(
-                        value: _selectedDetail,
+                        initialValue: _selectedDetail,
                         decoration: const InputDecoration(
                           labelText: 'Niveau de détail',
                           border: OutlineInputBorder(),
